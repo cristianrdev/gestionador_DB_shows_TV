@@ -26,8 +26,6 @@ def nuevo_show(request):
         release_date= request.POST['fecha_lanz'],
         description= request.POST['descripcion'],
             )
-        # print(new_show.id)
-        # print("-"*50)
         return redirect('/shows/'+ str(new_show.id))
 
 def detalle_show(request, id):
