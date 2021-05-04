@@ -19,7 +19,7 @@ def nuevo_show(request):
         return render(request, 'new_show.html')
 
     else:
-        print('ES UN POST************************************************************')
+        print('ES UN POST')
         new_show = Show.objects.create(
         title= request.POST['titulo'],
         network= request.POST['cadena'],
@@ -48,7 +48,7 @@ def editar_show(request, id):
         return render(request, 'edit_show.html', context)
 
     else:
-        print('ES UN POST************************************************************')
+        print('ES UN POST')
         show_to_update = Show.objects.get(id=id)
         show_to_update.title = request.POST['titulo']
         show_to_update.network = request.POST['cadena']
